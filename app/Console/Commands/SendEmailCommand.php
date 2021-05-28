@@ -43,7 +43,7 @@ class SendEmailCommand extends Command
         $users = User::all();
         foreach ($users as $user) {
             Mail::raw('Testing Cron Job ', function ($message) use ($user) {
-                $message->from('NewsonThokchom@gmail.com', 'Newson Thokchom');
+                $message->from('demo@gmail.com', 'Newson Thokchom');
                 // $message->sender('john@johndoe.com', 'John Doe');
                 $message->to($user->email)->subject('Testing Cron Job Funcationality');
                 // $message->cc('john@johndoe.com', 'John Doe');
